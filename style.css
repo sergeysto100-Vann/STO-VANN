@@ -81,9 +81,10 @@ li {
 
 
 header p:last-child {
-    font-size: 5em; /* 200% от 2.5em */
+    font-size: 3,75em; /* 150% от 2.5em */
     margin: 10px 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Сохранение тени для читаемости */
 }
+
 
 
