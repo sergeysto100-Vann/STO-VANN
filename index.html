@@ -1,81 +1,259 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STO-VANN - Реставрация ванн жидким акрилом в Ирбите, Свердловская область</title>
-    <meta name="description" content="Реставрация ванн жидким акрилом в Ирбите: цены от 5000 руб., примеры работ, быстрый выезд. STO-VANN — качественно и недорого в Свердловской области. Тел: +7 (919) 389-20-77">
-    <meta name="keywords" content="реставрация ванн Ирбит, реставрация ванн жидким акрилом Ирбит, эмалировка ванн Свердловская область, восстановление ванн Ирбит">
-    <!-- Schema.org для локального бизнеса (помогает в поиске) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "STO-VANN",
-        "description": "Реставрация ванн жидким акрилом в Ирбите",
-        "telephone": "+7 (919) 389-20-77",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Ирбит",
-            "addressRegion": "Свердловская область",
-            "addressCountry": "RU"
-        },
-        "url": "https://sergeysto100-vann.github.io/STO-VANN/",
-        "priceRange": "5000-8500"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STO-VANN — Реставрация ванн жидким акрилом в Ирбите</title>
+  <meta name="description" content="Реставрация ванн жидким акрилом в Ирбите: быстро, качественно, без демонтажа. Цены от 5000 руб. Примеры работ. Телефон: +7 (919) 389-20-77">
+  <meta name="keywords" content="реставрация ванн Ирбит, жидкий акрил Ирбит, эмалировка ванн, восстановление ванн Ирбит">
+  <meta name="robots" content="index, follow">
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
     }
-    </script>
-    <link rel="stylesheet" href="style.css">
+
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      opacity: 0;
+      animation: fade-in 1.2s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    .header-bg {
+      background-image: url('https://i.imgur.com/Ysr4Wgj.jpeg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    .header-bg::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .header-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-text h1 {
+      font-size: 2.5rem;
+      margin: 0 0 10px;
+    }
+
+    .header-text p {
+      font-size: 1.2rem;
+      margin: 0 0 10px;
+    }
+
+    .header-text .phone {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1.2s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1.2s ease;
+    }
+
+    footer.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .phone {
+      font-size: 20px;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .address {
+      text-align: center;
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .price ul, .services ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .gallery-container img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border: 2px solid #fff;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-container img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .gallery-container img {
+        width: 45%;
+        height: auto;
+      }
+      .header-text h1 {
+        font-size: 2rem;
+      }
+      .header-text p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-container img {
+        width: 90%;
+        height: auto;
+      }
+      .header-text h1 {
+        font-size: 1.5rem;
+      }
+      .header-text p {
+        font-size: 0.9rem;
+      }
+    }
+
+    .divider {
+      border-bottom: 1px solid #444;
+      margin: 30px 0;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>STO-VANN - Реставрация ванн жидким акрилом в Ирбите</h1>
-        <p>Восстановление ванн в Ирбите и Свердловской области: быстро, качественно, без демонтажа</p>
-        <p>+7 (919) 389-20-77</p>
-    </header>
 
-    <main>
-        <section id="about">
-            <h2>Реставрация ванн в Ирбите: наша услуга</h2>
-            <p>Мы обновляем старые ванны жидким акрилом в Ирбите (Свердловская область). Это быстрый способ вернуть ванне белоснежный вид: процесс занимает 4–6 часов, высыхание — 24 часа. Акрил безопасен, долговечен (до 15 лет) и не требует демонтажа. Выезд мастера по Ирбиту и окрестностям бесплатно!</p>
-        </section>
+  <header>
+    <div class="header-bg">
+      <div class="header-text">
+        <h1>STO-VANN — Реставрация ванн жидким акрилом в Ирбите</h1>
+        <p>Быстро, качественно, без демонтажа</p>
+        <div class="phone">📞 <a href="tel:+79193892077" style="color:#fff; text-decoration:none;">+7 (919) 389-20-77</a></div>
+      </div>
+    </div>
+  </header>
 
-        <section id="prices">
-            <h2>Стоимость реставрации ванн в Ирбите</h2>
-            <ul>
-                <li>Ванна 1,2 м — от 5000 руб.</li>
-                <li>Ванна 1,5 м — от 7500 руб.</li>
-                <li>Ванна 1,7 м — от 8500 руб.</li>
-                <li>Дополнительные услуги (демонтаж сифона, колеровка) — от 500 руб.</li>
-            </ul>
-        </section>
+  <section class="about">
+    <h2>О нашей услуге</h2>
+    <p>Мы обновляем старые ванны жидким акрилом в Ирбите (Свердловская область). Процесс занимает 4–6 часов, полное высыхание — 24 часа. Акрил безопасен, долговечен (до 15 лет) и не требует демонтажа. Выезд мастера по Ирбиту и окрестностям бесплатно.</p>
+  </section>
 
-        <section id="gallery">
-            <h2>Примеры работ по реставрации ванн в Ирбите</h2>
-            <div class="gallery">
-                <img src="https://i.imgur.com/dkJyPSx.jpeg300x200?text=Ванна+до/после+1" alt="Реставрация ванны жидким акрилом в Ирбите 1">
-                <img src="https://i.imgur.com/4ozlZxN.jpeg/300x200?text=Ванна+до/после+2" alt="Реставрация ванны жидким акрилом в Ирбите 2">
-                <img src="https://i.imgur.com/Llem1Ef.jpeg/300x200?text=Ванна+до/после+3" alt="Реставрация ванны жидким акрилом в Ирбите 3">
-                <img src="https://i.imgur.com/vIVk6B8.jpeg/300x200?text=Ванна+до/после+3" alt="Реставрация ванны жидким акрилом в Ирбите 3">
-            </div>
-        </section>
+  <div class="divider"></div>
 
-        <section id="contacts">
-            <h2>Контакты STO-VANN в Ирбите</h2>
-            <p>Адрес: Ирбит, Свердловская область (выезд по городу и области). Звоните для записи:</p>
-            <ul>
-                <li>Телефон: +7 (919) 389-20-77</li>
-                <li>Email: sergey.sto100@gmail.com</li>
-                <li>WhatsApp: +7 (919) 389-20-77</li>
-            </ul>
-        </section>
-    </main>
+  <section class="services">
+    <h2>Стоимость реставрации ванн</h2>
+    <ul>
+      <li>Ванна 1,2 м — от 5000 руб.</li>
+      <li>Ванна 1,5 м — от 7500 руб.</li>
+      <li>Ванна 1,7 м — от 8500 руб.</li>
+      <li>Дополнительно (демонтаж сифона, колеровка) — от 500 руб.</li>
+    </ul>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 STO-VANN. Реставрация ванн в Ирбите. Все права защищены.</p>
-    </footer>
+  <div class="divider"></div>
 
-    <script src="script.js"></script>
+  <section class="gallery">
+    <h2>Примеры работ</h2>
+    <div class="gallery-container">
+      <img src="https://i.imgur.com/dkJyPSx.jpeg" alt="Реставрация ванны 1">
+      <img src="https://i.imgur.com/4ozlZxN.jpeg" alt="Реставрация ванны 2">
+      <img src="https://i.imgur.com/Llem1Ef.jpeg" alt="Реставрация ванны 3">
+      <img src="https://i.imgur.com/vIVk6B8.jpeg" alt="Реставрация ванны 4">
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="contacts">
+    <h2>Контакты STO-VANN</h2>
+    <p>Адрес: Ирбит, Свердловская область (выезд по городу и области)</p>
+    <ul>
+      <li>Телефон: <a href="tel:+79193892077" style="color:#fff; text-decoration:none;">+7 (919) 389-20-77</a></li>
+      <li>Email: <a href="mailto:sergey.sto100@gmail.com" style="color:#fff; text-decoration:none;">sergey.sto100@gmail.com</a></li>
+      <li>WhatsApp: +7 (919) 389-20-77</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 STO-VANN | Реставрация ванн в Ирбите. Все права защищены.</p>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "STO-VANN",
+    "image": "https://i.imgur.com/Ysr4Wgj.jpeg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ирбит",
+      "addressRegion": "Свердловская область",
+      "addressCountry": "RU"
+    },
+    "telephone": "+7-919-389-20-77",
+    "url": "https://sergeysto100-vann.github.io/STO-VANN/"
+  }
+  </script>
+
+  <script>
+    const elements = document.querySelectorAll('section, footer');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    elements.forEach(el => observer.observe(el));
+  </script>
+
 </body>
 </html>
-
-
